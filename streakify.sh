@@ -2,19 +2,13 @@
 
 STREAKFILE='.streak'
 
-DATE=$1
+HITS=$(($(($RANDOM%3))+1))
 
-if [[ -z $DATE ]]
-then
-    DATE=`date`
-else
-    DATE=`date -d "$DATE 13:33:33"`
-fi
-
-echo 'Keep that streak going... artificially'
-
-echo `date -Iseconds -d "$DATE"` >> $STREAKFILE
-git commit -a -m "update streak for `date -I -d "$DATE"`" --date="$DATE"
+for i in `seq $HITS`
+do
+    echo `date` >> $STREAKFILE
+    git commit -a -m "update streak for `date`"
+done
 git push
 
 echo 'Congratulations, you just kept your streak going'
