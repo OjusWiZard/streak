@@ -16,3 +16,4 @@ done
 git push
 
 echo "Congratulations, you just kept your commit streak going!"
+
