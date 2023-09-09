@@ -1,16 +1,18 @@
 #!/bin/bash
 
+cd $(dirname "$0")
+
 STREAKFILE='.streak'
 
 HITS=$(($(($RANDOM%3))+1))
 
-cd $(pwd)
-
 for i in `seq $HITS`
 do
     echo `date` >> $STREAKFILE
-    git commit -a -m "$(curl -s https://whatthecommit.com/index.txt)"
+
+    RANDOM_MSG="$(curl -s https://raw.githubusercontent.com/ngerakines/commitment/main/commit_messages.txt | shuf -n 1)"
+    git commit -a -m "$RANDOM_MSG"
 done
 git push
 
-echo "Congratulations, you just kept your commit streak going"
+echo "Congratulations, you just kept your commit streak going!"
