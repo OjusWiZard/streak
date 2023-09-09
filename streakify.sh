@@ -1,10 +1,10 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 STREAKFILE='.streak'
 
 HITS=$(($(($RANDOM%3))+1))
 
-cd /home/Tanyx01/streak/
+cd $(pwd)
 
 for i in `seq $HITS`
 do
@@ -13,4 +13,4 @@ do
 done
 git push
 
-echo "Congratulations, you just kept your streak going"
+echo "Congratulations, you just kept your commit streak going"
