@@ -1,0 +1,15 @@
+
+name: commit-schedule
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Execute the script for making commits
+        run: ./streakify.sh
