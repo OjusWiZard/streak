@@ -4,7 +4,8 @@ cd $(dirname "$0")
 
 STREAKFILE='.streak'
 
-HITS=$(($(($RANDOM%3))+1))
+# HITS=$(($(($RANDOM%3))+1))
+HITS=1
 
 for i in `seq $HITS`
 do
