@@ -13,7 +13,7 @@ contracts: []
 protocols: []
 skills: []
 customs:
-- nrosavalory/agent:0.1.0:bafybeiebdnc7zoi6zpodoi2vjk3pt5z7lk2ighbmm5hjkksmaypowmkqsi
+- nrosavalory/agent:0.1.0:bafybeicfatevxp2yoj32qs6wnwzzeclrapt33k2upulxjpy22uqd5axtom
 default_ledger: ethereum
 required_ledgers:
 - ethereum
