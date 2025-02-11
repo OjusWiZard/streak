@@ -1,0 +1,14 @@
+name: agent
+author: nrosavalory
+version: 0.1.0
+type: custom
+description: The custom component package.
+license: Apache-2.0
+aea_version: '>=1.0.0, <2.0.0'
+fingerprint:
+  __init__.py: bafybeie6pmeardghpppp4qmrsrz2c5z736oyo6ttdo53mzvi5zkifg3v7m
+fingerprint_ignore_patterns: []
+dependencies: {}
+params:
+  TAVILY_API_KEY: ${str:TAVILY_API_KEY:XXXXXXX}
+  OPENAI_API_KEY: ${str:OPENAI_API_KEY:yyyyyyyy}
